@@ -38,7 +38,7 @@ public static class DependencyInjection
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
             options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        }).AddJwtBearer("Bearer", jwtOptions =>
+        }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, jwtOptions =>
         {
             var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtoptions.SecretKey));
             jwtOptions.TokenValidationParameters = new TokenValidationParameters()
