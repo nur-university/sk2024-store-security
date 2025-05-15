@@ -1,3 +1,5 @@
+	ValidateLifetime = true
+	Lifetime = 30,
 # SharedKernel - Security
 
 Este proyecto es parte la implementación de una arquitectura de microservicios. 
